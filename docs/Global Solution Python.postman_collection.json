@@ -1,0 +1,127 @@
+{
+	"info": {
+		"_postman_id": "8226fc20-8c31-48cf-98f0-a27528f80642",
+		"name": "Global Solution Python",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17203115"
+	},
+	"item": [
+		{
+			"name": "Get Company Statistics",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/:companyShortname/statistics",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						":companyShortname",
+						"statistics"
+					],
+					"variable": [
+						{
+							"key": "companyShortname",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Company Statistics by State",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/:companyShortname/statistics/teste",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						":companyShortname",
+						"statistics",
+						"teste"
+					],
+					"variable": [
+						{
+							"key": "companyShortname"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recycle Item",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/recycle/:item_token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"recycle",
+						":item_token"
+					],
+					"variable": [
+						{
+							"key": "item_token",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Item",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\": \"7cd60007f1114152ad54c73d6251477b\",\r\n    \"item_type\": \"plastic_bottle\",\r\n    \"state\": \"sp\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/:companyShortname/items",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						":companyShortname",
+						"items"
+					],
+					"variable": [
+						{
+							"key": "companyShortname",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
